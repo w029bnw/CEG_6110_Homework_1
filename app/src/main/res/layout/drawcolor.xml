@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageButton
+        android:id="@+id/leftArrow"
+        android:layout_width="84dp"
+        android:layout_height="77dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp"
+        android:background="#ffffff"
+        app:srcCompat="@mipmap/left_arrow"/>
+
+    <com.raed.drawingview.DrawingView
+        android:id="@+id/draw_view"
+        android:layout_width="307dp"
+        android:layout_height="290dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:saveEnabled="true"
+        app:brush="pencil"
+        app:brush_color="#2187bb"
+        app:drawing_background_color="#dddddd" />
+
+    <Button
+        android:id="@+id/undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="116dp"
+        android:layout_marginStart="27dp"
+        android:text="Undo" />
+
+    <Button
+        android:id="@+id/redo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/undo"
+        android:layout_marginEnd="27dp"
+        android:text="Redo" />
+
+    <ImageButton
+        android:id="@+id/save"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@android:drawable/ic_menu_save"/>
+
+    <ImageButton
+        android:id="@+id/clear"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <TextView
+        android:id="@+id/brush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="59dp"
+        android:layout_marginStart="108dp"
+        android:text="Brush Color: " />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/brushButton"
+        android:layout_width="55dp"
+        android:layout_height="52dp"
+        android:layout_alignTop="@+id/leftArrow"
+        android:layout_toStartOf="@+id/redo"
+        android:clickable="true"
+        app:backgroundTint="@android:color/background_light"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</RelativeLayout>
