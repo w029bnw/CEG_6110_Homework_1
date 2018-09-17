@@ -79,6 +79,20 @@ from the user.
 
 If the user wishes to return to the first UI of the app, they can click the small arrow button located at the bottom of the page.
 
+## Design
+
+The only real design decision that was made was surrounding the ability to switch between UI pages. A ViewPager was initially used to
+switch between UI pages but this was layered ontop of each of the views, rendering any buttons or views useless. It was eventually
+decided that each view would then be set manually and the ability to switch between UI pages would be implemented with buttons. This met
+the requirement for easy switching between pages for the user and allowed interaction with the components on each page by the user. 
+
+Classes were picked for their easy implementation and inclusion in the Android Studio project. The Drawing View library had a strong 
+majority of the desired functionality (clear,undo,redo,save). The Android Material Color Picker Dialog library was implemented to meet
+the final criteria of choosing colors. The dialog portion of this particular class made it easy to use since it required less space, and
+it allowed for more options by using RGB sliders. 
+
+Other than this, the app requirements were rather straight forward. No additional classes were created, as they were not necesary, and the direction of the design steered towards meeting all of the criteria of the assignment.
+
 ## Built With
 
 * [Android Studio](https://developer.android.com/studio/)
