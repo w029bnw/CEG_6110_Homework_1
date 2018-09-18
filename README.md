@@ -1,8 +1,8 @@
-# CEG_6110_Homework_1
+# CEG 6110 Homework 1
 Homework #1 Assignment for CEG 6110
 
-This android app was designed and created for Homework Assignment #1 for CEG 6110 using Android Studio. It has two interactive User Interfaces 
-(UIs), as listed in the assignment requirements. The first UI allows the user to type any set of words into a text field, which can be 
+This android app was designed and created for Homework Assignment #1 for CEG 6110 using Android Studio. It has two interactive User Interfaces
+(UIs), as listed in the assignment requirements. The first UI allows the user to type any set of words into a text field, which can be
 randomly set to any color by clicking a button. The second UI allows the user to draw a picture in a view and select any color with which
 to draw with. This view can then be cleared or saved to the user's device as a PNG. The user is able to toggle between UIs by using arrow
 buttons found at the bottom of each respective page.
@@ -12,29 +12,53 @@ buttons found at the bottom of each respective page.
   1. Download .zip folder from GitHub
   2. In Android Studio, import a new project ```File->New->Import Project```
   3. Select the zipped folder and click ```Next->Finish```
-      
+
 ### Prerequisites
 
-The app requires an Android environment to run in.
+This app requires an Android environment of at least Android 6.0 Marshmallow on the targeted device.
 
 ### Installing
 
-  1. Connect Android device to computer via USB cable
-  2. Enable USB debugging in the Developer Options as follows:
-  
-      a. Open the Settings app    
-      b. Select System (Android 8.0 or higher)    
-      c. Scroll to the bottom and select About Phone    
-      d. Scroll to the bottom and tap Build Number 7 times    
-      e. Return to the previous screen to find Developer Options near the bottom    
+* Running in Android Studio
+
+  1. Import the project into Android Studio
+
+  2. Connect Android device to computer via USB cable
+
+  3. Enable USB debugging in the Developer Options as follows:
+
+      a. Open the Settings app      
+      b. Select System (Android 8.0 or higher)      
+      c. Scroll to the bottom and select About Phone      
+      d. Scroll to the bottom and tap Build Number 7 times      
+      e. Return to the previous screen to find Developer Options near the bottom      
       f. Open Developer Options, then scroll down to enable USB debugging
-    
-  3. In Android Studio, click the app module in the Project window and select Run in the toolbar
-  4. Select your device in the Deployment Target window and click OK
-  
+
+  4. In Android Studio, click the app module in the Project window and select Run in the toolbar
+
+  5. Select your device in the Deployment Target window and click OK
+
+
+* Running on Android Device
+
+  1. Download and unzip project folder from GitHub
+
+  2. Connect Android device to computer via USB cable and enable file sharing
+
+  3. Copy the release APK from the release folder within the root directory of
+  the project into a desired folder on the Android Device
+
+  4. Using the Android Device, click the APK file and give the app permissions
+  to install
+
 ## Deployment
 
 Once installed onto the Android Device, the Homework1 app can be deployed through the device's app menu by clicking on its icon.
+
+### Note
+
+If issues are experienced during installation, make sure that the Android device is able to install apps from Unknown Sources.
+This setting can be changed at ```Settings->Security``` and checking the option under Device Administration.
 
 ### UI #1: Colored Text
 
@@ -82,16 +106,16 @@ If the user wishes to return to the first UI of the app, they can click the smal
 ## Design
 
 The only real design decision that was made was surrounding the ability to switch between UI pages. A ViewPager was initially used to
-switch between UI pages but this was layered ontop of each of the views, rendering any buttons or views useless. It was eventually
+switch between UI pages but this was layered on top of each of the views, rendering any buttons or views useless. It was eventually
 decided that each view would then be set manually and the ability to switch between UI pages would be implemented with buttons. This met
-the requirement for easy switching between pages for the user and allowed interaction with the components on each page by the user. 
+the requirement for easy switching between pages for the user and allowed interaction with the components on each page by the user.
 
-Classes were picked for their easy implementation and inclusion in the Android Studio project. The Drawing View library had a strong 
+Classes were picked for their easy implementation and inclusion in the Android Studio project. The Drawing View library had a strong
 majority of the desired functionality (clear,undo,redo,save). The Android Material Color Picker Dialog library was implemented to meet
 the final criteria of choosing colors. The dialog portion of this particular class made it easy to use since it required less space, and
-it allowed for more options by using RGB sliders. 
+it allowed for more options by using RGB sliders.
 
-Other than this, the app requirements were rather straight forward. No additional classes were created, as they were not necesary, and the direction of the design steered towards meeting all of the criteria of the assignment.
+Other than this, the app requirements were rather straight forward. No additional classes were created, as they were not necessary, and the direction of the design steered towards meeting all of the criteria of the assignment.
 
 ## Built With
 
@@ -104,5 +128,5 @@ Other than this, the app requirements were rather straight forward. No additiona
 ## Acknowledgments
 
 Two external libraries were used in the making of this app:
-  * DrawingView by Raed Mughaus : https://github.com/Raed-Mughaus/DrawingView 
+  * DrawingView by Raed Mughaus : https://github.com/Raed-Mughaus/DrawingView
   * Android Material Color Picker Dialog by Pes8: https://github.com/Pes8/android-material-color-picker-dialog
