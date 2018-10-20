@@ -8,13 +8,14 @@ env:
    - EMULATOR_API_LEVEL=21
    - ANDROID_BUILD_TOOLS_VERSION=28.0.0-rc02
    - ADB_INSTALL_TIMEOUT=5 # minutes (2 minutes by default)
-   - ANDROID_ABI=google_apis/armeabi-v7a
+   - ANDROID_ABI=armeabi-v7a
+   - ANDROID_TAG=google_apis
   
 android:
   components:
     - tools
-    - tools
     - platform-tools
+    - tools
     - build-tools-$ANDROID_BUILD_TOOLS_VERSION
     - android-$ANDROID_API_LEVEL
     - android-$EMULATOR_API_LEVEL
@@ -50,7 +51,7 @@ before_install:
     - ./gradlew dependencies || true
 
 before_script:
-    - echo no | android create avd --force -n test -t android-21 --abi google_apis/armeabi-v7a
+    - echo no | android create avd --force -n test -t android-21 --abi $ANDROID_ABI --tag $ANDROID_TAG
     - emulator -avd test -no-skin -no-audio -no-window &
     - android-wait-for-emulator
     - adb shell input keyevent 82 &
