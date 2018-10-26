@@ -1,4 +1,6 @@
-# CEG 6110 Homework 1
+# CEG 6110 Homework 1 
+[![Build Status](https://travis-ci.com/w029bnw/CEG_6110_Homework_1.svg?branch=master)](https://travis-ci.com/w029bnw/CEG_6110_Homework_1)
+
 Homework #1 Assignment for CEG 6110
 
 This android app was designed and created for Homework Assignment #1 for CEG 6110 using Android Studio. It has two interactive User Interfaces
@@ -43,7 +45,7 @@ This app requires an Android environment of at least Android 6.0 Marshmallow on 
 
   1. Download and unzip project folder from GitHub
 
-  2. Connect Android device to computer via USB cable and enable file sharing
+  2. Connect Android device to computer via USB cable and enable file shari
 
   3. Copy the release APK from the release folder within the root directory of
   the project into a desired folder on the Android Device
