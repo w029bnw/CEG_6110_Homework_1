@@ -11,6 +11,7 @@ import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -153,6 +154,15 @@ public class MainActivity extends AppCompatActivity {
             final TextView textView = (TextView)findViewById(R.id.Color_Values);
             textView.setText("COLOR: 0r, 0g, 0b, #000000");
 
+            //Button added to verify Travis CI
+            final Button newButton = (Button)findViewById(R.id.button);
+            newButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showAlertDialogButtonClick(v);
+                }
+            });
+
             //Generates random color for text view
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -176,6 +186,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    public void showAlertDialogButtonClick(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Button Action");
+        builder.setMessage("You clicked a button!");
+        builder.setPositiveButton("OK", null);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     //This is a function that can be used to compress the picture drawn by the user in the draw view
@@ -234,6 +253,15 @@ public class MainActivity extends AppCompatActivity {
             final EditText editText = (EditText)findViewById(R.id.editText1);
             final TextView textView = (TextView)findViewById(R.id.Color_Values);
             textView.setText("COLOR: 0r,0g,0b, #000000");
+
+            //Button added to verify Travis CI
+            final Button newButton = (Button)findViewById(R.id.button);
+            newButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showAlertDialogButtonClick(v);
+                }
+            });
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
